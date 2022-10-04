@@ -1,15 +1,15 @@
 import React, { useMemo } from "react";
 import { IPost } from "../../types/types";
 
-export const usePosts = (posts:IPost[], postQuery:any ) => {
+export const usePosts = (posts:IPost[], query:any ) => {
   const searchedPosts:IPost[] = useMemo(() => {
     return [...posts].filter((post) => {
   
       // if (!filter.get("post")) return true;
       
-      return post.title.toLowerCase().includes(postQuery);
+      return post.title.toLowerCase().includes(query.toLowerCase());
     })
-  }, [posts, postQuery]);
+  }, [posts, query]);
   return searchedPosts;
 };
 

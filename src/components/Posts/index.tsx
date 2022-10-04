@@ -13,9 +13,8 @@ import { IPost } from "../../types/types";
 
 const  App: React.FC = () => {
   const [posts, setPosts] = useState<IPost[]>([]);
-  const [filter, setFilter] = useSearchParams();
-  const postQuery = filter.get("post") || "";
-  const searchedPosts:IPost[] = usePosts(posts, postQuery);
+  const [filter, setFilter] = useState<any>({query:''});
+  const searchedPosts:IPost[] = usePosts(posts, filter.query);
   const [totalCount, setTotalCount] = useState<number>();
   const [totalPages, setTotalPages] = useState<number>(0);
   const [limit, setLimit] = useState(9);
