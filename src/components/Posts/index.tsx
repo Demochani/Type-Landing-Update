@@ -1,5 +1,5 @@
-import React, { useState, useRef, useMemo, useEffect } from "react";
-import "../../styles/styles.scss";
+import React, { useState, useRef, useMemo, useEffect,useLayoutEffect } from "react";
+import "../../styles/styles.css";
 import  PostList from "./components/PostList"
 import PostFilter from "../Filter/index";
 import { usePosts } from "../../utils/hooks/usePosts";
@@ -49,7 +49,7 @@ const  App: React.FC = () => {
       }
     };
     observer.current = new IntersectionObserver(callback);
-    observer.current.observe(lastElement.current);
+    observer.current.observe(lastElement?.current);
   }, [isPostLoading]);
 
   useEffect(() => {

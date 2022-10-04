@@ -2,7 +2,7 @@ import React, { useMemo } from "react";
 import { IPost } from "../../types/types";
 
 export const usePosts = (posts:IPost[], postQuery:any ) => {
-  const searchedPosts = useMemo(() => {
+  const searchedPosts:IPost[] = useMemo(() => {
     return [...posts].filter((post) => {
   
       // if (!filter.get("post")) return true;

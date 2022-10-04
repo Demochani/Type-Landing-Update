@@ -1,12 +1,14 @@
 import React from "react";
-import "../../../styles/styles.scss";
-// import {IPost} from "../../../types/types"
+import "../../../styles/styles.css";
+import {IPost} from "../../../types/types"
 
-interface ItemProps {
-  title:string
+interface PostItemProps {
+  post:IPost
+  number:number
+  key:any
 }
 
-const PostItem: React.FC<ItemProps> = (post) => {
+const PostItem: React.FC<PostItemProps> = ({post, number, key}) => {
   return (
     <div className="interesting-post">
       <div className="interesting-post-img">

@@ -15,7 +15,7 @@ const CurrentTemp: React.FC = () => {
           Math.round(tempr.main.temp - 273) +
           "&deg;";
       })
-      .finally((error) => error);
+      // .finally((error) => error);
   }, []);
 
   return (

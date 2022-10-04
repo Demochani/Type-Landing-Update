@@ -1,9 +1,9 @@
 import axios from "axios";
-import { IPosts } from "../../types/types";
+import { IPost } from "../../types/types";
 
 export default class PostService {
   static async getInteresting(limit = 9, page = 1) {
-    const response = await axios.get<IPosts[]>(
+    const response = await axios.get<IPost[]>(
       "https://jsonplaceholder.typicode.com/photos",
       {
         params: {

@@ -1,13 +1,13 @@
 import React from "react";
 import PostItem from "./PostItem";
-import "../../../styles/styles.scss";
+import "../../../styles/styles.css";
 import { IPost } from "../../../types/types";
 
 interface PostListProps{
-  posts:IPost
+  posts:IPost[]
 }
 
-const PostInteresting: React.FC<IPost> = ({ posts }) => {
+const PostList: React.FC<PostListProps> = ({ posts }) => {
   if (!posts.length) {
     return (
       <p className="no-posts">
@@ -31,4 +31,4 @@ const PostInteresting: React.FC<IPost> = ({ posts }) => {
   );
 };
 
-export default PostInteresting;
+export default PostList;

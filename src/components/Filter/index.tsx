@@ -1,9 +1,9 @@
 import React from "react";
-import "../../styles/styles.scss";
+import "../../styles/styles.css";
 
 interface PostFilterProps {
   filter: URLSearchParams;
-  setFilter: (filter: URLSearchParams) => string;
+  setFilter: (filter: URLSearchParams): => string;
 }
 
 const PostFilter: React.FC<PostFilterProps> = ({ filter, setFilter }) => {
